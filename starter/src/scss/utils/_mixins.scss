@@ -1,0 +1,36 @@
+@mixin theme($theme-name) {
+    $theme-map: map-get($themes, $theme-name);
+
+    @each $property, $value in $theme-map {
+        --#{$property}: #{$value};
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 1024px) {
+        @content;
+    }
+}
+
+// Flexbox center mixin
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Button reset mixin
+@mixin button-reset {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+}

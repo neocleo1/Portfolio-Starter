@@ -1,0 +1,19 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.button {
+    background-color: var(--primary);
+    color: var(--background);
+    border: 1px solid var(--primary);
+
+    &:hover {
+        background-color: var(--secondary);
+        color: var(--text);
+    }
+}
+
+.button--secondary {
+    background-color: var(--secondary);
+    color: var(--text);
+    border: 1px solid var(--border);
+}

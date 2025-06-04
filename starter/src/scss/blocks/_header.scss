@@ -1,0 +1,22 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+.header {
+    background-color: var(--secondary);
+    padding: $spacing-md;
+    border-bottom: 1px solid var(--border);
+
+    nav {
+        @include flex-center;
+        justify-content: space-between;
+
+        img {
+            height: 40px;
+        }
+
+        ul {
+            @include flex-center;
+            gap: $spacing-md;
+        }
+    }
+}

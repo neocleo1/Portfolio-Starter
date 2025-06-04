@@ -1,0 +1,113 @@
+@import '../utils/variables';
+@import '../utils/mixins';
+
+
+// Base element styles
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px; // Base font size
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', $font-primary;
+    font-size: $font-size-base;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--background);
+    transition: background-color $transition-base, color $transition-base;
+}
+
+// Typography
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: $spacing-md;
+    color: var(--text);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    margin-bottom: $spacing-md;
+    color: var(--text);
+}
+
+// Links
+a {
+    color: var(--primary);
+    text-decoration: none;
+    transition: color $transition-base;
+
+    &:hover {
+        color: var(--text);
+    }
+}
+
+// Images
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+// Lists
+ul {
+    list-style: none;
+}
+
+// Buttons
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: all $transition-base;
+}
+
+// Forms
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+// Main layout structure
+#body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#main {
+    flex: 1;
+    padding: $spacing-lg;
+}
+
+// Responsive container
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+}
