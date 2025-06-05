@@ -1,8 +1,5 @@
-@import '../utils/variables';
-@import '../utils/mixins';
+@import '../utils/_variables';
 
-
-// Base element styles
 * {
     margin: 0;
     padding: 0;
@@ -10,20 +7,19 @@
 }
 
 html {
-    font-size: 16px; // Base font size
+    font-size: $font-size-base;
     scroll-behavior: smooth;
 }
 
 body {
-    font-family: 'Lato', $font-primary;
+    font-family: $font-primary;
     font-size: $font-size-base;
     line-height: 1.6;
-    color: var(--text);
-    background-color: var(--background);
-    transition: background-color $transition-base, color $transition-base;
+    color: $text;
+    background-color: $background;
+    transition: $transition-base, color $transition-base;
 }
 
-// Typography
 h1,
 h2,
 h3,
@@ -33,7 +29,7 @@ h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: $spacing-md;
-    color: var(--text);
+    color: $text;
 }
 
 h1 {
@@ -50,33 +46,29 @@ h3 {
 
 p {
     margin-bottom: $spacing-md;
-    color: var(--text);
+    color: $text;
 }
 
-// Links
 a {
-    color: var(--primary);
+    color: $primary;
     text-decoration: none;
     transition: color $transition-base;
-
-    &:hover {
-        color: var(--text);
-    }
 }
 
-// Images
+a:hover {
+    color: $text;
+}
+
 img {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
-// Lists
 ul {
     list-style: none;
 }
 
-// Buttons
 button {
     font-family: inherit;
     cursor: pointer;
@@ -85,7 +77,6 @@ button {
     transition: all $transition-base;
 }
 
-// Forms
 input,
 textarea,
 select {
@@ -93,7 +84,6 @@ select {
     font-size: inherit;
 }
 
-// Main layout structure
 #body {
     min-height: 100vh;
     display: flex;
@@ -105,7 +95,6 @@ select {
     padding: $spacing-lg;
 }
 
-// Responsive container
 .container {
     max-width: 1200px;
     margin: 0 auto;

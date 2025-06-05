@@ -5,17 +5,17 @@
 }
 
 html {
-  font-size: 16px;
+  font-size: 1rem;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: "Lato", "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  color: var(--text);
-  background-color: var(--background);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  color: #f1f4f2;
+  background-color: #000000;
+  transition: 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 h1,
@@ -27,7 +27,7 @@ h6 {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
-  color: var(--text);
+  color: #f1f4f2;
 }
 
 h1 {
@@ -44,16 +44,17 @@ h3 {
 
 p {
   margin-bottom: 1rem;
-  color: var(--text);
+  color: #f1f4f2;
 }
 
 a {
-  color: var(--primary);
+  color: #7cfa7a;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
 }
+
 a:hover {
-  color: var(--text);
+  color: #f1f4f2;
 }
 
 img {

@@ -1,19 +1,34 @@
 @import '../utils/variables';
 @import '../utils/mixins';
 
-.button {
-    background-color: var(--primary);
-    color: var(--background);
-    border: 1px solid var(--primary);
+.btn-primary {
+    display: inline-block;
+    background-color: $primary;
+    color: $secondary;
+    padding: $spacing-md $spacing-xl;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: $button-text;
+    transition: all $transition-base;
+    border: 2px solid $primary;
 
-    &:hover {
-        background-color: var(--secondary);
-        color: var(--text);
+    &:hover,
+    &:focus {
+        background-color: transparent;
+        color: $primary;
+        transform: translateY($button-hover-lift);
+        box-shadow: $button-shadow;
+        outline: none;
     }
-}
 
-.button--secondary {
-    background-color: var(--secondary);
-    color: var(--text);
-    border: 1px solid var(--border);
+    &:focus {
+        box-shadow: $button-shadow,
+            $focus-ring $focus-ring-secondary;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+        padding: $spacing-sm $spacing-lg;
+        font-size: $button-text-mobile;
+    }
 }

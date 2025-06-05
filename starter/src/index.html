@@ -15,9 +15,14 @@
 <body id="body">
   <header class="header">
     <nav>
-      <img src="/src/img/shan.dev.png">
+      <a href="home"><img src="/src/img/shan.dev.png" alt="shan.dev logo"></a>
+      <input type="checkbox" id="mobile-menu-toggle">
+      <label for="mobile-menu-toggle" aria-label="Toggle mobile menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
       <ul>
-        <li><a href="home">Home</a></li>
         <li><a href="projects">Projects</a></li>
         <li><a href="skills">Skills</a></li>
         <li><a href="resume">Resume</a></li>
@@ -27,15 +32,63 @@
   </header>
   <main id="main">
     <section id="bio" class="bio">
-      <img src="/src/img/profile-pic.jpg">
-      <h2>Hello! My name is Shannon Stephenson</h2>
-      <p>
-        Entry-level software developer with a strong foundation in full-stack development and a passion for
-        problem-solving. Leveraging customer service and technical troubleshooting experience to build intuitive,
-        user-centric applications.
-      </p>
+      <div class="bio-content">
+        <div class="bio-image">
+          <img src="/src/img/profile-pic.jpg" alt="Shannon Stephenson profile photo">
+        </div>
+        <div class="bio-text">
+          <h2>Shannon Stephenson's Web Development Portfolio</h2>
+          <p>
+            Entry-level software developer with a strong foundation in full-stack development and a passion for
+            problem-solving. Leveraging customer service and technical troubleshooting experience to build intuitive,
+            user-centric applications.
+          </p>
+        </div>
+      </div>
     </section>
     <section id="latest-projects" class="latest-projects">
+      <h2>Latest Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card" tabindex="0">
+          <div class="project-image">
+            <img src="/src/img/restaurant.jpg" alt="a monochromatic image of a spoon, plate and fork">
+          </div>
+          <div class="project-content">
+            <h3>Rest-Rant</h3>
+            <p>Created a restaurant review app with live database updates and comment sections. Utilized Bootstrap,
+              MongoDB, and Express.js to streamline user interactions.</p>
+          </div>
+        </div>
+
+        <div class="project-card" tabindex="0">
+          <div class="project-image">
+            <img src="/src/img/project.jpg" alt="the word: projects on a wall">
+          </div>
+          <div class="project-content">
+            <h3>Issue-Tracker</h3>
+            <p>Developed a ticket-tracking app with user authentication (JWT) and full CRUD functionality. Built with
+              React.js,
+              Material UI, and a MERN stack, improving issue-resolution efciency by 30%.</p>
+          </div>
+        </div>
+
+        <div class="project-card" tabindex="0">
+          <div class="project-image">
+            <img src="/src/img/weather.jpg" alt="an illustration of the sun and a cloud">
+          </div>
+          <div class="project-content">
+            <h3>Weather Dashboard</h3>
+            <p>Python command-line app fetching real-time weather data via OpenWeatherMap API with secure API key
+              handling. Demonstrated REST API integration and Python skills using python-dotenv and requests. Utilized
+              Python, APIs, JSON.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-cta">
+        <a href="projects" class="btn-primary">View All Projects</a>
+      </div>
     </section>
   </main>
   <footer class="footer"> &copy; Shannon Stephenson 2025
